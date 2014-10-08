@@ -1,0 +1,38 @@
+@CHARSET "UTF-8";
+
+body {
+	background-color: #b7d1c4;
+	margin: 20px;
+	font-family: cursive;
+}
+
+h2{
+	font-family: Verdana, sans-serif;
+	font-size: 2em;
+}
+
+div {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+#header {
+	font-size: 3em;
+	font-family: Verdana;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#head_imgs {
+	cellpadding: 20px;	
+}
+
+.text_type{
+	border-radius: 5px;
+	font-family: cursive;
+	font-size: 1.75em;
+}
+
+#introductions {
+	background-color: #B9D7D9;
+}
