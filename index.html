@@ -20,7 +20,7 @@
 		(Super-Wide-Angle-lens Radial Distortion correction)
 	</div>
 	<div align="center" class="text_type">
-		<a href="http://www.cis.pku.edu.cn/vision/Visual&Robot/people/ying/cn-index.htm"><span style="color: red">Xianghua Ying</span></a>, Xiang Mei, Sen Yang, Ganwen Wang, Jiangpeng Rong, <a href="http://www.cis.pku.edu.cn/vision/Visual&Robot/people/zha/">Hongbin Zha</a> <br>
+		<a href="http://www.cis.pku.edu.cn/vision/Visual&Robot/people/ying/cn-index.htm">Xianghua Ying</a>, Xiang Mei, Sen Yang, Ganwen Wang, Jiangpeng Rong, Hongbin Zha <br>
 		Peking University, Beijing 100871, P.R. China<br>
 		Email: xhying@cis.pku.edu.cn<br>
 	</div>
@@ -54,7 +54,7 @@
 	      <table align="center" border="line" id="download_tables"  class="text_type" style="border:none">
                 <tr  align="center">
                     <td width="200">Version</td>
-		    <td width="500"><span style="color: red">Source Code</span></td>
+		    <td width="500"><span style="color: red">Matlab Source Code</span></td>
 		    <td width="200">Image Data</td>
                 </tr>
                 <tr  align="center">
@@ -68,7 +68,7 @@
                 </tr>
 		<tr>
 			<td colspan=3 style="border:none">
-				<span style="color: red">Copyright: </span>This software is made publicly for research use only. For commercial applications please contact the <span style="color: red">xhying@cis.pku.edu.cn</span> to discuss alternatives.<br><span style="color: red">Note: </span>It is the version 1.0 toolbox, latter version will be updated soon. </span><br><span style="color: red">Simple user's guide: </span><a href="User's_Guide.pdf">Download here.</a>
+				<span style="color: red">Copyright: </span>This software is made publicly for research use only. For commercial applications please contact the <span style="color: red"><a href="mailto:xhying@cis.pku.edu.cn">xhying@cis.pku.edu.cn</a></span> to discuss alternatives.<br><span style="color: red">Note: </span>It is the version 1.0 toolbox, latter version will be updated soon. </span><br><span style="color: red">Simple user's guide: </span><a href="User's_Guide.pdf">PDF</a>
 			</td>
 		</tr>
             </table>
@@ -77,37 +77,29 @@
 	<div id="reference" class="text_type">
                 <ul>
 		    <li>
-			Xianghua Ying, Xiang Mei, Sen Yang, Ganwen Wang, Hongbin Zha, Radial distortion correction from a single image of a planar calibration pattern using convex optimization, IEEE International Conference on Image Processing (ICIP), 2014, <a href="./ref/icip2014.pdf">Download here</a>
+			Xianghua Ying, Xiang Mei, Sen Yang, Ganwen Wang, Hongbin Zha, Radial distortion correction from a single image of a planar calibration pattern using convex optimization, IEEE International Conference on Image Processing (ICIP), 2014. <a href="./ref/icip2014.pdf">PDF</a>
 		    </li>
 		    <li>
-			Xianghua Ying, Xiang Mei, Sen Yang, Ganwen Wang, Jiangpeng Rong, Hongbin Zha, Imposing Differential Constraints on Radial Distortion Correction, the 12th Asian Conference on Computer Vision (ACCV'14), 2014. <a href="./ref/accv2014.pdf">Download here</a>
+			Xianghua Ying, Xiang Mei, Sen Yang, Ganwen Wang, Jiangpeng Rong, Hongbin Zha, Imposing Differential Constraints on Radial Distortion Correction, the 12th Asian Conference on Computer Vision (ACCV'14), 2014. <a href="./ref/accv2014.pdf">PDF</a>
 		    </li>
 	</div>
 
 
-        <h2><a id="introduction"></a>Introduction</h2>
+        <h2><a id="introduction"></a>Description</h2>
 	<div id="introductions" class="text_type">
-        <p>
-		<strong>Index Terms</strong> - Radial distortion, distortion correction, convex optimization, camera calibration
-	</p>
         <p>
         	In Hartley-Kang's paper, they proposed a very efficient
         	method to determine the center of radial distortion by
         	finding the epipole in a radial distorted image of a planar
         	calibration pattern, whereas the original planar calibration
         	pattern is directly treated as an image to construct an
-        	image pair together with the radial distorted image. After
-        	determined the center of radial distortion, a least square
-        	method was utilized to recover the radial distortion
-        	function using the monotonicity constraints. In this paper,
-        	we present a convex optimization method to recover the
-        	radial distortion function using the same constraints as
-        	those required by Hartley-Kang's method, whereas our method
-        	can obtain better results of radial distortion correction.
-        	The experiments validate our approach. More information please refer
+        	image pair together with the radial distorted image. This paper presents a convex optimization method for radial lens distortion correction from a single image of a planar pattern using the monotonicity constraints of radial distortion function. In the Hartley-Kang's method, it is required about twenty images of a planar pattern taken in different orientations and positions, to obtain satisfactory results of radial distortion correction using a least square method. However, in this paper, we illustrate that only utilizing a single radial distorted image of a planar pattern, reasonable corrected results can still be obtained by using our method, and the results may be better than those from the Hartley-Kang's method in the same situation.       
+		More information please refer
         	<a href="./ref/icip2014.pdf">Ying X, et al.</a>
         </p>
-
+        <p>
+		<strong>Index Terms</strong> - Radial distortion, Distortion correction, Convex optimization, Camera calibration, Fisheye lens,  Checkerboard, Single image
+	</p>
        	</div>	
 	<h2><a id="reference"></a>Reference</h2>
 	<div id="reference" class="text_type">
@@ -118,6 +110,10 @@
                     <li>
                         <a href="http://www.vision.caltech.edu/bouguetj/calib_doc/#start">Camera Calibration Toolbox for Matlab.</a>
                     </li>
+		    <li><a href="./ref/Zhang.pdf">Zhang Z. A flexible new technique for camera calibration[J]. Pattern Analysis and Machine Intelligence, IEEE Transactions on, 2000, 22(11): 1330-1334.</a>
+		    </li>
+		    <li><a href="./ref/Hartly.pdf">Hartley R, Kang S B. Parameter-free radial distortion correction with center of distortion estimation[J]. Pattern Analysis and Machine Intelligence, IEEE Transactions on, 2007, 29(8): 1309-1321.</a>
+		    </li>
                 </ul>
 
 	</div>
