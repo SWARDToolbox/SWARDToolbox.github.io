@@ -33,6 +33,11 @@ div {
 	font-size: 1.75em;
 }
 
+.text_style{
+	color: red;
+	text-decoration: underline;
+}
+
 #introductions {
 #	background-color: #B9D7D9;
 }
