@@ -1,24 +1,25 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
-		<title>SWARD  (super-wide-angle-lens radial distortion correction) camera calibration toolbox</title>
-		<script>
-			var _czc = _czc || [];
-			_czc.push(["_setAccount", "1253379194"]);
-		</script>
-
-	</head>
+    <head>
+	<meta charset="utf-8">
+	<link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+	<title>SWARD  (Super-Wide-Angle-lens Radial Distortion correction) camera calibration toolbox</title>
+	<script>
+		var _czc = _czc || [];
+		_czc.push(["_setAccount", "1253379194"]);
+	</script>
+    </head>
 
     <body>
     	<div id="header">
-    		<img src="./img/logo.gif" width=200/><br>
+    		<img id="logo" src="./img/logo.gif"/><br>
     		SWARD Camera Calibration Toolbox
 	</div>
+
 	<div align="center" class="text_type">
-		Matlab code for <span class="text_style" >S</span>uper-<span class="text_style" >W</span>ide-<span class="text_style" >A</span>ngle-lens <span class="text_style" >R</span>adial <span class="text_style" >D</span>istortion correction just using a single image of a checkerboard
+		Matlab code for <span class="special_text_style" >S</span>uper-<span class="special_text_style" >W</span>ide-<span class="special_text_style" >A</span>ngle-lens <span class="special_text_style" >R</span>adial <span class="special_text_style" >D</span>istortion correction just using a single image of a checkerboard
 	</div>
+
 	<div align="center" class="text_type">
 		<a href="http://www.cis.pku.edu.cn/vision/Visual&Robot/people/ying/index.htm">Xianghua Ying</a>, Xiang Mei, Sen Yang, Ganwen Wang, Jiangpeng Rong, Hongbin Zha <br>
 		Peking University, Beijing 100871, P.R. China<br>
@@ -26,31 +27,30 @@
 	</div>
 			
         <div  align="center">  
-		<table id="head_imgs">
+		<table id="head_image_tables">
 			<tr>
 				<td>
-					<a href="./img/1.jpg"><img src="./img/1.jpg" width=250 height=200/></a>
+					<a href="./img/1.jpg"><img id="head_imgs" src="./img/1.jpg"/></a>
 				</td>
 				<td>
-					<a href="./img/1_r.jpg"><img src="./img/1_r.jpg" width=250 height=200/></a>
+					<a href="./img/1_r.jpg"><img id="head_imgs" src="./img/1_r.jpg"/></a>
 				</td>
 				<td>
-					<a href="./img/5.jpg"><img src="./img/5.jpg" width=250 height=200/></a>
+					<a href="./img/5.jpg"><img id="head_imgs" src="./img/5.jpg"/></a>
 				</td>
 				<td>
-					<a href="./img/5_r.jpg"><img src="./img/5_r.jpg" width=250 height=200/></a>	
+					<a href="./img/5_r.jpg"><img id="head_imgs" src="./img/5_r.jpg"/></a>	
 				</td>
 				<td>
-					<a href="./img/4.jpg"><img src="./img/4.jpg" width=250 height=200/></a>
+					<a href="./img/4.jpg"><img id="head_imgs" src="./img/4.jpg"/></a>
 				</td>
 				<td>
-					<a href="./img/4_r.jpg"><img src="./img/4_r.jpg" width=250 height=200/></a>
+					<a href="./img/4_r.jpg"><img id="head_imgs" src="./img/4_r.jpg"/></a>
 				</td>
 			</tr>
 		</table>
         </div>
-	<div align="center">
-
+	<div id="source_table" align="center">
 	      <table align="center" border="line" id="download_tables"  class="text_type" style="border:none">
                 <tr  align="center">
                     <td width="200">Version</td>
@@ -73,10 +73,11 @@
 		</tr>
             </table>
 	</div>
-	<table>
+
+	<table cellspacing="0" cellpadding="0">
 		<tr>
 			<td align="left" width="100%">
-				<h2><a id="reference"></a>Citation</h2>
+				<h2>Citation</h2>
 			</td>
 			<td align="right">
 				<a href="http://info.flagcounter.com/JXzQ"><img src="http://s11.flagcounter.com/count/JXzQ/bg_79EDED/txt_000000/border_CCCCCC/columns_2/maxflags_12/viewers_0/labels_0/pageviews_0/flags_0/" alt="Flag Counter" border="0"></a>
@@ -98,21 +99,14 @@
         <h2><a id="introduction"></a>Description</h2>
 	<div id="introductions" class="text_type">
         <p>
-        	In Hartley-Kang's paper, they proposed a very efficient
-        	method to determine the center of radial distortion by
-        	finding the epipole in a radial distorted image of a planar
-        	calibration pattern, whereas the original planar calibration
-        	pattern is directly treated as an image to construct an
-        	image pair together with the radial distorted image. This paper presents a convex optimization method for radial lens distortion correction from a single image of a planar pattern using the monotonicity constraints of radial distortion function. In the Hartley-Kang's method, it is required about twenty images of a planar pattern taken in different orientations and positions, to obtain satisfactory results of radial distortion correction using a least square method. However, in this paper, we illustrate that only utilizing a single radial distorted image of a planar pattern, reasonable corrected results can still be obtained by using our method, and the results may be better than those from the Hartley-Kang's method in the same situation.       
-		More information please refer
-        	<a href="./ref/icip2014.pdf">Ying X, et al.</a>
+        	In Hartley-Kang's paper, they proposed a very efficient method to determine the center of radial distortion by finding the epipole in a radial distorted image of a planar calibration pattern, whereas the original planar calibration pattern is directly treated as an image to construct an image pair together with the radial distorted image. This paper presents a convex optimization method for radial lens distortion correction from a single image of a planar pattern using the monotonicity constraints of radial distortion function. In the Hartley-Kang's method, it is required about twenty images of a planar pattern taken in different orientations and positions, to obtain satisfactory results of radial distortion correction using a least square method. However, in this paper, we illustrate that only utilizing a single radial distorted image of a planar pattern, reasonable corrected results can still be obtained by using our method, and the results may be better than those from the Hartley-Kang's method in the same situation. More information please refer<a href="./ref/icip2014.pdf">Ying et al.</a>.
         </p>
         <p>
 		<strong>Index Terms</strong> - Radial distortion, Distortion correction, Convex optimization, Camera calibration, Fisheye lens,  Checkerboard, Single image
 	</p>
        	</div>	
-	<h2><a id="reference"></a>Reference</h2>
-	<div id="reference" class="text_type">
+	<h2>Reference</h2>
+	<div class="text_type">
 		<ul>
                     <li>
                         <a href="http://www.cvlibs.net/software/libcbdetect/">Automatic Corner Detection of Checkerboards</a>
@@ -120,7 +114,7 @@
                     <li>
                         <a href="http://www.vision.caltech.edu/bouguetj/calib_doc/#start">Camera Calibration Toolbox for Matlab.</a>
                     </li>
-		    <li><a href="./ref/Zhang.pdf">Zhengyou Zhang. "A flexible new technique for camera calibration." IEEE Trans. Pattern Analysis and Machine Intelligence, vol. 22, no. 11, pp. 1330-1334, 2000.</a>
+		    <li><a href="./ref/Zhang.pdf">Zhengyou Zhang, "A flexible new technique for camera calibration," IEEE Trans. Pattern Analysis and Machine Intelligence, vol. 22, no. 11, pp. 1330-1334, 2000.</a>
 		    </li>
 		    <li><a href="./ref/Hartly.pdf">Richard Hartley and Sing Bing Kang, "Parameter-free radial distortion correction with center of distortion estimation," IEEE Trans. Pattern Analysis and Machine Intelligence, vol. 29, no. 8, pp. 1309-1321, 2007.</a>
 		    </li>

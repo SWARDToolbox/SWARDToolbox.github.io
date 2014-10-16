@@ -23,17 +23,39 @@ div {
 	margin-bottom: 20px;
 }
 
-#head_imgs {
+#logo {
+	width: 200px;
+}
+
+#head_image_tables {
 	cellpadding: 20px;	
 }
 
+#head_imgs {
+	width: 250px;
+	height: 200px;
+}
+
+#source_table {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+#reference {
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+
+ul {
+	margin: 0;
+}
 .text_type{
 	border-radius: 5px;
 	font-family: cursive;
 	font-size: 1.75em;
 }
 
-.text_style{
+.special_text_style{
 	color: red;
 	text-decoration: underline;
 }
